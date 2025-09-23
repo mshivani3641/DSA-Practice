@@ -1,0 +1,90 @@
+Algorithm for Creation:
+1. A doubly linked list node requires three fields:
+•	data: To store the actual value or data associated with the node.
+•	next: A pointer to the next node in the sequence.
+•	prev: A pointer to the previous node in the sequence.
+2. Allocate Memory for the New Node.
+3. Initialize Node Members:
+•	Assign the desired data value to the data field of the newNode.
+•	Initialize both next and prev pointers of the newNode to NULL. This is crucial as a newly created node is initially isolated and not yet linked to any other nodes.
+4. Return New Node.
+Algorithm for Insertion at Begin Position:
+1. Create a newNode with data field assigned the given value.
+2.If the list is empty:
+o	Set newNode->next to NULL.
+o	Set newNode->prev to NULL.
+o	Update the head pointer to point to newNode.
+3.If the list is not empty:
+o	Set newNode->next to head.
+o	Set newNode->prev to NULL.
+o	Set head->prev to newNode.
+o	Update the head pointer to point to newNode.
+Algorithm for Insertion at End Position:
+1.Create a newNode with data field assigned the given value.
+2.If the list is empty:
+o	Set newNode->next to NULL.
+o	Set newNode->prev to NULL.
+o	Update the head pointer to point to newNode.
+2.If the list is not empty:
+o	Traverse the list to find the last node (where last->next == NULL).
+o	Set last->next to newNode.
+o	Set newNode->prev to last.
+o	Set newNode->next to NULL.
+Algorithm for Insertion at a Specific Position:
+1.Create a newNode.
+2.Find the size of the list to ensure the position is within valid bounds.
+3.If the position is 0 (or 1 depending on your indexing):
+o	Use the insertion at the beginning approach.
+4.If the position is equal to the size of the list:
+o	Use the insertion at the end approach.
+5.If the position is valid and not at the boundaries:
+o	Traverse the list to find the node immediately before the desired insertion point (prevNode).
+o	Set newNode->next to prevNode->next.
+o	Set newNode->prev to prevNode.
+o	If prevNode->next is not NULL, set prevNode->next->prev to newNode.
+o	Set prevNode->next to newNode.
+Algorithm for Deletion at Begin Position:
+1.Check if the List is Empty: If true, there's nothing to delete.
+2.Check if the List Contains Only One Node:
+o	Set head to NULL.
+o	Free the memory of the node.
+3.If the List Contains More Than One Node:
+o	Update head to head->next.
+o	Set the prev of the new head to NULL.
+o	Free the memory of the old head.
+
+Algorithm for Deletion at Begin Position:
+1.Check if the List is Empty: If true, there's nothing to delete.
+2.If the List is Not Empty:
+o	Traverse to the last node using a loop.
+o	Check if the last node is the only node (head->next == NULL):
+Update head to NULL.
+o	If more than one node:
+Set the next of the second last node (last->prev) to NULL.
+o	Free the memory of the last node.
+Algorithm for Deletion at a specific Position:
+1.Check Position Validity:
+o	If position is 0 (or 1 depending on indexing), use deletion at the beginning.
+o	If position is the size of the list, use deletion at the end.
+o	Otherwise, proceed with the middle deletion.
+2.Traverse to the Specified Position:
+o	Use a loop to reach the node (delNode) at the desired position.
+o	If delNode is the first node, adjust head.
+o	If not, adjust delNode->prev->next and delNode->next->prev if delNode->next is not NULL.
+3.Free the Memory:
+o	Release the node to be deleted.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

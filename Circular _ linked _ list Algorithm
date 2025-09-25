@@ -1,0 +1,68 @@
+Algorithm for insertion at Beginning:
+
+•	Create a new node with the given value.
+•	Check Empty List (last == nullptr):
+o	Make newNode->next point to itself.
+•	Insert at Beginning:
+o	Set newNode->next to last->next.
+o	Update last->next to newNode.
+
+Algorithm for insertion at End:
+
+•	Create a new node with the given value.
+•	Check Empty List, If last is nullptr then initialize the list with the new node and make it point to itself.
+•	Otherwise, Set the new node's next to the head node.
+•	Update the current last's next to point to the new node.
+•	Update last to the new node.
+
+Algorithm for insertion at Specific Location:
+
+•	Check if the list is empty
+o	If the position is not 1, print an error message (since the position doesn’t exist in an empty list).
+o	If the position is 1, create the new node and make its next pointer point to itself (since it is the only node).
+•	If the list is not empty: Create the new node with the given data.
+•	For insertion at position 1 (insert at the beginning):
+o	Traverse the list to find the last node (the node whose next pointer points to the head).
+o	Set the new node’s next pointer to the current head.
+o	Set the next pointer of the last node to the new node.
+o	Update the head to point to the new node.
+•	For insertion at positions other than 1
+o	Traverse the list to reach the node just before the desired position (position - 1).
+o	Once you reach that node, set the new node’s next pointer to point to the node that was previously at the desired position.
+o	Set the (position-1)-th node’s next pointer to the new node.
+•	If the new node is inserted at the end
+o	Update the last node’s next pointer to point to the new node, maintaining the circular nature of the list.
+o	Ensure the new node’s next pointer points to the head, completing the circle.
+o	This process ensures that the circular structure of the linked list is preserved after every insertion.
+Algorithm for deletion at Beginning:
+•	Check if List is Empty: If last is nullptr, print "List is empty" and return nullptr.
+•	Get Head Node: Set head to last->next.
+•	Check for Single Node: If head equals last, delete head and set last to nullptr.
+•	Handle Multiple Nodes:
+=> Update last->next to point to head->next.
+=> Delete head.
+•	Return Updated last.
+
+Algorithm for Deletion at a Specific Position:
+
+•	Check if the list is empty (last is None). If yes, return None.
+•	Set curr to last.next (head) and prev to last.
+•	If the list has only one node (curr == last) and the node’s data matches key, delete it by setting last = None and return.
+•	If the head node’s data matches key, update last.next to skip the head node and return last.
+•	Otherwise, traverse the list using curr and prev until you either reach back to last or find the node with key.
+•	If the node with key is found:
+=> Update prev.next to skip curr
+=> If curr is the last node, update last = prev.
+•	Return the updated last.
+
+Algorithm for deletion at End:
+
+•	Check if the list is empty (last == None). If yes, return None.
+•	Set head = last.next.
+•	If the list has only one node (head == last), delete it by setting last = None and return.
+•	Traverse the list using a pointer curr starting from head until curr.next == last.
+•	Update curr.next = head to skip the last node.
+•	Delete the last node and update last = curr.
+•	Return the updated last.
+
+

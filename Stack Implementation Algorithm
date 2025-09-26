@@ -1,0 +1,38 @@
+Stack Implementation Using an Array
+Algorithm for Push():
+Step 1: START
+Step 2: if top>=size-1 then
+Write “ Stack is Overflow”
+Step 3: Otherwise
+3.1	: read data value ‘x’
+3.2	: top=top+1;
+3.3	: stack[top]=x;
+Step 4: END
+
+Algorithm for Pop():
+Step 1: START
+Step 2: if top==-1 then
+Write “Stack is Underflow”
+Step 3: otherwise
+3.1	: print “deleted element”
+3.2	: top=top-1;
+Step 4: END
+
+Algorithm for Peek():
+•	Before returning the top element from the stack, we check if the stack is empty.
+•	If the stack is empty (top == -1), we simply print “Stack is empty”.
+•	Otherwise, we return the element stored at index = top 
+.
+Algorithm for Display():
+Step 1: START
+Step 2: if top==-1 then
+Write “Stack is Underflow”
+Step 3: otherwise
+1.1	: print “Display elements are”
+1.2	: for top to 0
+Print ‘stack[i]’
+Step 4: END
+
+
+
+

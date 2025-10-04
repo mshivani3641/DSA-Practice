@@ -1,0 +1,28 @@
+ii) Using linked list
+
+Algorithm for Enqueue():
+•	Create a newNode with the given value and set its next pointer to NULL.
+•	If the queue is empty (front is NULL), set both front and rear to newNode.
+•	Otherwise, set rear->next to newNode and update rear to newNode.
+
+Algorithm for Dequeue():
+•	If the queue is empty (front is NULL), report an underflow condition (e.g., "Queue is Empty").
+•	Otherwise, store front in a temporary Node pointer (e.g., temp).
+•	Update front to front->next.
+•	Delete or free temp to release the memory.
+•	If front becomes NULL after the operation (meaning the queue is now empty), set rear to NULL as well.
+
+Algorithm for Display():
+•	If the queue is empty, report an error or return a special value.
+•	Otherwise, return the data of the queue without modifying the queue.
+
+
+
+
+
+
+
+
+
+
+

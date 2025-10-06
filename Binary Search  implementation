@@ -1,0 +1,19 @@
+(i) Binary Search tree  :
+
+Algorithm for Insertion in a BST:
+
+•	Start at the root node.
+•	Compare the key with the value of the current node:
+o	If key is less than the current node's value, move to the left child.
+o	If key is greater than the current node's value, move to the right child.
+•	Continue traversing: down the tree until a null pointer is encountered.
+•	Create a new node: with the key and attach it at that null position, maintaining the BST properties.
+
+Algorithm for Deletion in a BST:
+
+•	Deleting a node from a BST is more complex and has three cases:
+•	Node has no children (leaf node): Simply remove the node.
+•	Node has one child: Replace the node with its single child.
+•	Node has two children: Find the in-order successor (smallest node in the right subtree) or in-order predecessor (largest node in the left subtree), copy its value to the node to be deleted, and then delete the successor/predecessor node (which will have at most one child).
+
+
